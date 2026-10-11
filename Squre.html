@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS形状hover效果</title>
+    <style>
+        body {
+            background-color: #1a1a28;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 32px;
+            margin:0;
+        }
+        .item{
+            width:120px;
+            height:120px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:22px;
+            color:#fff;
+            /* 过渡动画 */
+            transition: all 0.3s ease;
+            /* 默认阴影向下偏移 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+        }
+        .item:hover{
+            /* 上移10px */
+            transform: translateY(-10px);
+            /* 阴影偏移量变为0 */
+            box-shadow: 0 0 20px rgba(0,0,0,0.35);
+        }
+        /* 正方形 */
+        .box1{
+            background: linear-gradient(135deg,#ff9255,#ff5e62);
+        }
+        /* 圆角正方形 */
+        .box2{
+            background: linear-gradient(135deg,#20d898,#26e0b6);
+            border-radius:16px;
+        }
+        /* 大圆角 */
+        .box3{
+            background: linear-gradient(135deg,#997ea1,#706091);
+            border-radius:32px;
+        }
+        /* 圆形 */
+        .box4{
+            background: linear-gradient(135deg,#ffd06b,#ff9b73);
+            border-radius:50%;
+        }
+        .box5{
+            background: linear-gradient(135deg,#467968,#446b82);
+            border-radius:12px;
+        }
+        .box6{
+            background: linear-gradient(135deg,#9174aa,#b298c7);
+            border-radius:50%;
+        }
+        /* hover时中间文字显示 */
+        .item .text{
+            opacity:0;
+            transition: opacity 0.3s;
+        }
+        .item:hover .text{
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="item box1">
+        <span class="text">hover</span>
+    </div>
+    <div class="item box2">
+        <span class="text">hover</span>
+    </div>
+    <div class="item box3">
+        <span class="text">hover</span>
+    </div>
+    <div class="item box4">
+        <span class="text">hover</span>
+    </div>
+    <div class="item box5">
+        <span class="text">hover</span>
+    </div>
+    <div class="item box6">
+        <span class="text">hover</span>
+    </div>
+</body>
+</html>
